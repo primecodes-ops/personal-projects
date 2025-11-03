@@ -1,0 +1,48 @@
+body {
+  margin: 0 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Styling */
+.line-break {
+  padding-top: 2rem;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+/* Header */
+header p {
+  font-style: italic;
+}
+
+.dev-name,
+.job-title {
+  color: #023ca1;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+/* Section */
+.section-title {
+  color: #0451d6;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+h4 {
+  color: #0c84df;
+}
+
+a {
+  color: #0451d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

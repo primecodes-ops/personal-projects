@@ -1,0 +1,158 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* General */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: rgb(238, 241, 243);
+}
+
+/* Typography */
+.bold {
+  font-weight: bold;
+  color: #154d71;
+}
+
+.italic {
+  font-style: italic;
+  color: #154d71;
+}
+
+.code-text {
+  background-color: #f8f9fa;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+  color: #e74c3c;
+  border: 1px solid #dee2e6;
+}
+
+/* Nav Bar */
+.title-header {
+  font-size: 1.5em;
+  text-align: center;
+  overflow-wrap: anywhere;
+  border-bottom: 3px solid #324354;
+  color: rgb(238, 241, 243);
+}
+
+.title-header h1 {
+  margin: 0 auto 20px auto;
+  padding: 5px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+  border-bottom: 3px solid #324354;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1em;
+  color: #d8dbdf;
+  padding: 15px;
+}
+
+nav ul li a:hover {
+  background-color: #324354;
+  color: #3498db;
+  border-left: 4px solid #3498db;
+  cursor: pointer;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100vh;
+  padding: 20px 0;
+  overflow-y: auto;
+  background-color: #2d3748;
+}
+
+#main-doc {
+  margin-left: 35%;
+  padding: 20px;
+  max-width: 1000px;
+  background-color: rgb(238, 241, 243);
+  min-height: 100vh;
+}
+
+/* Code Container */
+.code-container {
+  background-color: #2d3748;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 25px 0;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+}
+
+.code-container pre {
+  margin: 0;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  color: #f8f9fa;
+  white-space: pre;
+  text-indent: 0;
+}
+
+/* Header */
+.main-section-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #154d71;
+}
+
+article h1 {
+  color: #1c6ea4;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  #navbar {
+    width: 25%;
+  }
+
+  #main-doc {
+    margin-left: 25%;
+    padding: 40px;
+  }
+
+  article {
+    font-size: 1.1em;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  #navbar {
+    width: 20%;
+  }
+
+  #main-doc {
+    margin-left: 20%;
+    max-width: 1200px;
+  }
+}

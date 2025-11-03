@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.6;
+  background-color: #efefef;
+}
+
+/* Navbar */
+.nav {
+  width: 100%;
+  height: 3rem;
+  background-color: #fddc38;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  margin-bottom: 12px;
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list li {
+  list-style: none;
+  padding: 0.7rem 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.nav-list li a:hover {
+  color: orangered;
+  font-weight: 700;
+}
+
+/* Welcome Section */
+.welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  width: 175px;
+  height: 40%;
+  border-radius: 30%;
+  margin: 1rem;
+  background: url(images/PRIMAVERA_2024_FORMAL_ID_PICTURE_copy.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.last-name {
+  font-size: 3em;
+  letter-spacing: -1px;
+  color: orangered;
+}
+
+.first-name {
+  font-size: 1.3em;
+  margin-top: -15px;
+  font-weight: 200;
+  color: orangered;
+}
+
+.job-desc-container {
+  background-color: orange;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.job-description {
+  padding: 0.5rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.skills-section {
+  height: 75%;
+  width: 100%;
+  background-color: rgb(255, 186, 57);
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  text-align: center;
+  color: orangered;
+  margin-top: 0.5rem;
+}
+
+.skills-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  margin-top: -1.5rem;
+}
+
+.skill {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.skill.one {
+  background-image: url(images/c-.png);
+}
+
+.skill.two {
+  background-image: url(images/python.png);
+}
+
+.skill.three {
+  background-image: url(images/html.png);
+}
+
+.skill.four {
+  background-image: url(images/text.png);
+}
+
+/* Projects Section */
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.projects h1 {
+  color: orangered;
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 2.5em;
+}
+
+.project-tile {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card-container {
+  background-color: #fddc38;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* .project-card-container:last-child {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
+} */
+
+.project-card-container:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  width: 99%;
+  height: 40vh;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: inherit;
+}
+
+.project-card-container p {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  z-index: 1;
+  background-color: orange;
+  border-radius: 4px;
+  padding: 5px;
+  color: white;
+}
+
+.project-card-container:hover p {
+  background-color: rgb(162, 15, 15);
+  color: #fddc38;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+}
+
+.project-card-container:hover p::before {
+  content: "< ";
+  color: #fddc38;
+}
+
+.project-card-container:hover p::after {
+  content: " />";
+  color: #fddc38;
+}
+
+.project-card.one {
+  background-image: url(images/survey-form-sample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+.project-card.two {
+  background-image: url(images/evaluation-form-sample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+.project-card.three {
+  background-image: url(images/technical-documentation-page-sample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+.project-card.four {
+  background-image: url(images/single-page-cv-sample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+.project-card.five {
+  background-image: url(images/landing-page-sample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+  width: 100%;
+  height: 30vh;
+  background-color: rgb(255, 186, 57);
+  padding: 35px 10px 10px 10px;
+}
+
+.contact h1 {
+  color: orangered;
+  text-align: center;
+}
+
+.contact p {
+  color: white;
+  font-size: 0.8em;
+  font-weight: 400;
+  text-align: center;
+  margin-top: -6px;
+  font-style: italic;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.contact-container i {
+  font-size: 40px;
+  color: #e4e4e4;
+  margin-top: 10px;
+}
+
+.contact-container i:hover {
+  color: orangered;
+}
+
+@media only screen and (min-width: 992px) {
+  .welcome-section {
+    height: 80vh;
+  }
+  .profile-container {
+    width: 430px;
+    height: 430px;
+    border-radius: 30%;
+    margin: 1rem;
+    background: url(images/PRIMAVERA_2024_FORMAL_ID_PICTURE_copy.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .job-description {
+    font-size: 1.5em;
+  }
+  .skills-section {
+    height: 25%;
+  }
+  .skills-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 7rem;
+    margin-top: -50px;
+  }
+  .skills-section h2 {
+    font-size: 3em;
+  }
+  .skill {
+    width: 100px;
+    height: 100px;
+  }
+  .projects h1 {
+    font-size: 4em;
+    margin-top: 0;
+    padding: 0;
+  }
+  .project-card-container p {
+    font-size: 1.4em;
+  }
+  .contact h1 {
+    font-size: 3em;
+  }
+  .contact p {
+    font-size: 1.3em;
+  }
+  .contact-container {
+    gap: 70px;
+  }
+  .contact-container i {
+    font-size: 72px;
+    margin-top: 30px;
+  }
+}
