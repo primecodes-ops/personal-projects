@@ -31,7 +31,7 @@ It includes web development projects, C++ programs, and small applications I’v
 ## 🧩 Tech Stack Overview
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend / Logic:** C++ (console programs)
+- **Backend / Logic:** C++ and Python (console programs)
 - **Other Skills:** Responsive design, forms, interactive elements
 
 ---
