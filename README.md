@@ -17,6 +17,7 @@ It includes web development projects, C++ programs, and small applications I’v
 | [Survey Form](./survey-form)                                   | Interactive survey form                         | HTML, CSS     |
 | [Technical Documentation Page](./technical-documentation-page) | Documentation page layout practice              | HTML, CSS     |
 | [To-Do App](./to-do-app)                                       | Simple interactive to-do app                    | HTML, CSS, JS |
+| [Calculator](./calculator)                                     | Simple interactive calculator                   | HTML, CSS, JS |
 
 ---
 
