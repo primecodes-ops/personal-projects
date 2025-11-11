@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General */
+:root {
+  --background-color: #1a1e2e;
+  --background-color-2: #262a3b;
+  --text-color: #f2f5ff;
+  --metal-color: #333645;
+  --light-metal-color: #4b4f66;
+  --red: #e81416;
+  --orange: #ffa500;
+  --yellow: #faeb36;
+  --green: #79c314;
+  --blue: #487de7;
+  --indigo: #4b369d;
+  --violet: #70369d;
+  --brown: #714508;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1a1e2e;
+  color: #f2f5ff;
+  line-height: 1.6;
+}
+
+/* Bulb Container */
+.lightrope {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+  gap: 4vw;
+}
+
+.rope {
+  position: absolute;
+  width: 100vw;
+  height: 5px;
+  background-color: var(--brown);
+  bottom: 7.3vw;
+}
+
+/* Bulb */
+.bulb {
+  position: relative;
+}
+
+.light {
+  position: relative;
+  width: 7vw;
+  height: 7vw;
+  z-index: 2;
+  top: 0.7vw;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  transition: opacity 0.1s, filter 0.1s;
+}
+
+.holder {
+  position: absolute;
+  width: 3vw;
+  height: 2vw;
+  left: 2vw;
+  top: -1vw;
+  z-index: 1;
+  background-color: var(--metal-color);
+}
+
+.holder::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background: var(--light-metal-color);
+  display: block;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.red.glow {
+  box-shadow: 0 0 20px 5px var(--red);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+.orange.glow {
+  box-shadow: 0 0 20px 5px var(--orange);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.yellow.glow {
+  box-shadow: 0 0 20px 5px var(--yellow);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.green.glow {
+  box-shadow: 0 0 20px 5px var(--green);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.blue.glow {
+  box-shadow: 0 0 20px 5px var(--blue);
+}
+
+.indigo {
+  background-color: var(--indigo);
+}
+
+.indigo.glow {
+  box-shadow: 0 0 20px 5px var(--indigo);
+}
+
+.violet {
+  background-color: var(--violet);
+}
+
+.violet.glow {
+  box-shadow: 0 0 20px 5px var(--violet);
+}
+
+/* Utility Frame */
+.utility-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 10vw;
+}
+
+.utility-frame .spd-cont {
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.utility-frame p {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.speed {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: var(--background-color-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+}
+
+.utility-frame .power {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.on,
+.off {
+  position: relative;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background-color: var(--background-color-2);
+  font-size: 100%;
+  margin-bottom: 7vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.on span,
+.off span {
+  margin: 0; /* remove any default margin */
+  padding: 0; /* remove padding */
+  text-align: center; /* optional for text */
+}
+
+@media (width >= 1024px) {
+  .speed .spd {
+    font-size: 2rem;
+  }
+
+  .utility-frame p {
+    font-size: 3rem;
+  }
+
+  .power .on-text,
+  .power .off-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (hover: hover) {
+  .speed:hover {
+    background-color: var(--text-color);
+    color: var(--background-color-2);
+  }
+  .on:hover,
+  .off:hover {
+    background-color: var(--text-color);
+    color: var(--background-color-2);
+  }
+}
