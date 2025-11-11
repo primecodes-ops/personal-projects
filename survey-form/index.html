@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Service Feedback Form</h1>
+    <p id="description">Your feedback helps us create better experiences!</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend class="heading">Personal Information</legend>
+
+        <label id="name-label" for="name">Enter Your Name:</label>
+        <input id="name" type="text" placeholder="John Doe" required />
+
+        <label id="email-label" for="email">Enter Your Email:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="someone@example.com"
+          required
+        />
+
+        <label id="number-label" for="age">Enter Your Age:</label>
+        <input
+          type="number"
+          id="age"
+          min="13"
+          max="200"
+          placeholder="25"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend class="heading">Service Feedback Survey</legend>
+        <h2 class="maintext first">Rate your overall experience</h2>
+        <p class="subtext">1 being the lowest and 4 being the highest rating</p>
+        <div class="radio-container">
+          <label class="radio-button" for="satisfaction">
+            <input name="satisfaction" value="option-1" type="radio" /><span class="radio-number">1</span>
+            <input name="satisfaction" value="option-2" type="radio" /><span class="radio-number">2</span>
+            <input name="satisfaction" value="option-3" type="radio" /><span class="radio-number">3</span>
+            <input name="satisfaction" value="option-4" type="radio" checked /><span class="radio-number">4</span>
+          </label>
+        </div>
+        <div class="checkbox-group">
+            <label for="referral">
+                <h2 class="maintext">Would you recommened us to others?</h2>
+                <input value="yes" type="checkbox" checked /><span
+                  class="checkbox-cat"
+                  >Yes, I would</span
+                >
+                <input value="maybe" type="checkbox" /><span class="checkbox-cat"
+                  >Maybe, depending on their needs</span
+                >
+                <input value="no" type="checkbox" /><span class="checkbox-cat"
+                  >No, I wouldn't</span>
+        </div>
+        </label>
+        <label for="service-selection">
+          <h2 class="maintext">Which service did you use?</h2>
+          <select name="service-selection" id="service-selection">
+            <option value="option">Select an option</option>
+            <option value="product-purchase">Product Purchase</option>
+            <option value="customer-support">Customer Support</option>
+            <option value="online-help">Online Help</option>
+          </select>
+          <label for="comment">
+            <h2 class="maintext">Any additional feedback?</h2>
+            <textarea name="comment" id="comment" rows="5" cols="50">
+            </textarea>
+          </label>
+        </label>
+      </fieldset>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>

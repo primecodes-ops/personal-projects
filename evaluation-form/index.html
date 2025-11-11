@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Survey Form Branch</title>
+</head>
+
+<body>
+  <div class="title">
+    <h1 class="title-main">Instructor Evaluation Form</h1>
+    <p class="title-sub">
+      All responses will remain confidential and used only for improvement
+      purposes
+    </p>
+  </div>
+
+  <form>
+    <div class="container evaluatee">
+      <fieldset>
+        <legend class="main-legend">Evaluatee's Information</legend>
+        <label for="instructor-name">Instructor's Name:</label>
+        <input id="instructor-name" name="instructor-name" type="text" required />
+
+        <label for="course">Course:</label>
+        <select name="course" id="course" required>
+          <option value="">-- Select a course --</option>
+          <option value="programming">CSDC101</option>
+          <option value="mathematics">CSMC111</option>
+          <option value="computer">CSDC100</option>
+        </select>
+      </fieldset>
+    </div>
+
+    <div class="container evaluator">
+      <fieldset>
+        <legend class="main-legend">Evaluator's Information</legend>
+        <label for="student-name">Student's Name:</label>
+        <input id="student-name" name="student-name" type="text" required />
+
+        <label for="student-year-program">Year & Program:</label>
+        <input id="student-year-program" name="student-year-program" type="text" required />
+
+        <label for="student-email">Student's Email:</label>
+        <input id="student-email" name="student-email" type="email" required />
+      </fieldset>
+    </div>
+
+    <div class="container evaluation">
+      <fieldset>
+        <legend class="main-legend">Evaluation Form</legend>
+        <fieldset class="container question">
+          <legend class="question">The instructor clearly explains the course objectives and expectations.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q1" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q1" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q1" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q1" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q1" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor is well-prepared for each class session.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q2" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q2" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q2" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q2" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q2" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor communicates the subject matter clearly and effectively.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q3" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q3" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q3" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q3" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q3" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor encourages student participation and discussion.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q4" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q4" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q4" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q4" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q4" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container questions">
+          <legend class="question">The instructor is available and approachable outside of class.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q5" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q5" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q5" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q5" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q5" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor provides useful and timely feedback on assignments.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q6" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q6" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q6" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q6" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q6" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor uses class time effectively and stays on topic.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q7" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q7" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q7" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q7" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q7" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The instructor treats all students with respect and fairness.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q8" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q8" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q8" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q8" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q8" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">The teaching methods used helped me understand the course content.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q9" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q9" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q9" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q9" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q9" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container question">
+          <legend class="question">Overall, I am satisfied with the instructor’s performance.</legend>
+
+          <div class="radio-container">
+            <label>
+              <input name="q10" value="strongly disagree" type="radio" required>Strongly Disagree
+            </label>
+
+            <label>
+              <input name="q10" value="disagree" type="radio">Disagree
+            </label>
+
+            <label>
+              <input name="q10" value="neutral" type="radio">Neutral
+            </label>
+
+            <label>
+              <input name="q10" value="agree" type="radio">Agree
+            </label>
+
+            <label>
+              <input name="q10" value="strongly agree" type="radio">Strongly Agree
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="container feedback">
+          <legend class="comment">Do you have any additional comments?</legend>
+          <label for="comment">
+            <textarea name="comment" id="comment"></textarea>
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </div>
+  </form>
+</body>
+
+</html>

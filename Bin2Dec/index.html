@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary meta tags -->
+    <title>Bin2Dec</title>
+    <meta name="title" content="Bin2Dec">
+    <meta name="description" content="Converts binary to decimal">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+    <div class="frame">
+        <h1 id="title">Bin2Dec</h1>
+        <p>A web platform that converts a binary sequence to its corresponding decimal form</p>
+
+        <p class="label bold">Binary Sequence</p>
+        <input id="binaryInput" type="text">
+        <p><span class="bold">NOTE</span>: The maximum number of bits the input can handle is 8.</p>
+        <p id="error"></p>
+        <button id="convertBtn"><span class="bold">Convert</span></button>
+
+        <p id="result"></p>
+    </div>
+
+    <!-- External JS Link -->
+    <script src="./assets/js/index.js" defer></script>
+</body>
+
+</html>

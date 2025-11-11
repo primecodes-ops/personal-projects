@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="This page contains the technical documentation of a certain programming language" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation Page</title>
+</head>s
+
+<body>
+    <nav id="navbar">
+        <header class="title-header">
+            <h1>C++ Documentation</h1>
+        </header>
+        <ul>
+            <li>
+                <a href="#C++_Basics" class="nav-link">C++ Basics</a>
+            </li>
+
+            <li>
+                <a href="#Comments" class="nav-link">Comments</a>
+            </li>
+
+            <li>
+                <a href="#Introduction_to_objects_and_variables" class="nav-link">Introduction to objects and
+                    variables</a>
+            </li>
+
+            <li>
+                <a href="#Variable_assignment_and_initialization" class="nav-link">Variable assignment and
+                    initialization</a>
+            </li>
+
+            <li>
+                <a href="#Uninitialized_variables_and_undefined_behavior" class="nav-link">Uninitialized variables and
+                    undefined behavior</a>
+            </li>
+
+            <li>
+                <a href="#Introduction_to_iostream:_cout,_cin,_and_endl" class="nav-link">Introduction to iostream:
+                    cout,
+                    cin, and endl</a>
+            </li>
+
+            <li>
+                <a href="#Keywords_and_naming_identifiers" class="nav-link">Keywords and naming identifiers</a>
+            </li>
+
+            <li>
+                <a href="#Whitespace_and_basic_formatting" class="nav-link">Whitespace and basic formatting</a>
+            </li>
+
+            <li>
+                <a href="#Introduction_to_literals_and_operators" class="nav-link">Introduction to literals and
+                    operators</a>
+            </li>
+
+            <li>
+                <a href="#Introduction_to_expressions" class="nav-link">Introduction to expressions</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="C++_Basics">
+            <header class="main-section-header">C++ Basics</header>
+            <article>
+                <h1>Statements and the structure of a program</h1>
+                <p>
+                    A computer program is a sequence of instructions that tell the
+                    computer what to do. A <span class="bold">statement</span> is a type
+                    of instruction that causes the program to
+                    <span class="italic">perform some action</span>.
+                </p>
+                <p>
+                    Statements are by far the most common type of instruction in a C++ program. This is because they are
+                    the smallest independent unit of computation in the C++ language. In that regard, they act much like
+                    sentences do in natural language. When we want to convey an idea to another person, we typically
+                    write or speak in sentences (not in random words or syllables). In C++, when we want to have our
+                    program do something we typically write statements.
+                </p>
+                <p>Most (but not all) statements in C++ end in a semicolon. If you see a line that ends in a semicolon,
+                    it’s probably a statement.</p>
+                <p>In a high-level language such as C++, a single statement may compile into many machine language
+                    instructions.</p>
+            </article>
+            <article>
+                <h1>Functions and the <span class="code-text">main</span> function</h1>
+                <p>In C++, statements are typically grouped into units called functions. A <span
+                        class="bold">function</span> is a collection of
+                    statements that get executed sequentially (in order, from top to bottom). As you learn to write your
+                    own programs, you’ll be able to create your own functions and mix and match statements in any way
+                    you please (we’ll show how in a future lesson).</p>
+                <p>When the program is run, the statements inside of <span class="code-text">main</span> are executed in
+                    sequential order.</p>
+                <p>Programs typically terminate (finish running) after the last statement inside function <span
+                        class="code-text">main</span> has been
+                    executed (though programs may abort early in some circumstances, or do some cleanup afterwards).
+                </p>
+                <p>Functions are typically written to do a specific job or perform some useful action. For example, a
+                    function named <span class="code-text">max</span> might contain statements that figures out which of
+                    two numbers is larger. A
+                    function named <span class="code-text">calculateGrade</span> might calculate a student’s grade from
+                    a set of test scores. A
+                    function named <span class="code-text">printEmployee</span> might print an employee’s information to
+                    the console. We will talk a
+                    lot more about functions soon, as they are the most commonly used organizing tool in a program.</p>
+                <p>In programming, the name of a function (or object, type, template, etc…) is called its <span
+                        class="bold">identifier</span>.</p>
+            </article>
+            <article>
+                <h1>Characters and text</h1>
+                <p>In written language, the most basic unit of communication is the character. To simplify slightly, a
+                    <span class="bold">character</span> is a written symbol or mark, such as a letter, digit,
+                    punctuation mark, or mathematical
+                    symbol. When we tap an alphabetic or numeric key on our keyboard, a character is produced as a
+                    result, which can then be displayed on the screen. The following are all characters: <span
+                        class="code-text">a</span>, <span class="code-text">2</span>, <span class="code-text">$</span>,
+                    and <span class="code-text">=</span>.
+                </p>
+                <p>In many cases, such as when writing words or sentences, we want to make use of more than one
+                    character. A sequence of characters is called <span class="bold">text</span> (also called a <span
+                        class="bold">string</span> in programming contexts).
+                </p>
+            </article>
+            <article>
+                <h1>Hello world!</h1>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | #include &lt;iostream&gt;
+2 | 
+3 | int main() 
+4 | &lbrace; 
+5 |   std::cout &lt;&lt; "Hello world!"; 
+6 |   return 0; 
+7 | &rbrace;</pre>
+                    </code>
+                </div>
+                <p>Line 1 is a special type of line called a preprocessor directive. This <span
+                        class="code-text">#include</span> preprocessor
+                    directive indicates that we would like to use the contents of the <span
+                        class="code-text">iostream</span> library, which is the
+                    part of the C++ standard library that allows us to read and write text from/to the console. We need
+                    this line in order to use <span class="code-text">std::cout</span> on line 5. Excluding this line
+                    would result in a compile error
+                    on line 5, as the compiler wouldn’t otherwise know what <span class="code-text">std::cout</span> is.
+                </p>
+                <p>Line 2 is blank, and is ignored by the compiler. This line exists only to help make the program more
+                    readable to humans (by separating the <span class="code-text">#include</span> preprocessor directive
+                    and the subsequent parts of
+                    the program).
+                </p>
+                <p>Line 3 tells the compiler that we’re going to write (define) a function whose name (identifier) is
+                    <span class="code-text">main</span>. As you learned above, every C++ program must have a <span
+                        class="code-text">main</span> function or it will fail to link.
+                    This function will produce a value whose type is <span class="code-text">int</span> (an integer).
+                </p>
+                <p>Lines 4 and 7 tell the compiler which lines are part of the <span class="italic">main</span>
+                    function. Everything between the
+                    opening curly brace on line 4 and the closing curly brace on line 7 is considered part of the <span
+                        class="code-text">main</span>
+                    function. This is called the function body.</p>
+                <p>
+                    Line 5 is the first statement within function <span class="code-text">main</span>, and is the first
+                    statement that will execute
+                    when we run our program. <span class="code-text">std::cout</span> (which stands for “character
+                    output”) and the <span class="code-text">&lt;&lt;</span> operator
+                    allow
+                    us to display information on the console. In this case, we’re displaying the text <span
+                        class="code-text">Hello world!</span>.
+                    This statement creates the visible output of the program. </p>
+                <p>Line 6 is a return statement. When an executable program finishes running, the program sends a value
+                    back to the operating system in order to indicate whether it ran successfully or not. This
+                    particular return statement returns the integer value <span class="code-text">0</span> to the
+                    operating system, which means
+                    “everything went okay!”. This is the last statement in the program that executes.</p>
+                <p>All of the programs we write will follow this general template, or a variation on it.</p>
+            </article>
+            <article>
+                <h1>Syntax and syntax errors</h1>
+                <p>The set of rules that describe how specific words (and punctuation) can be arranged to form valid
+                    sentences in a language is called <span class="bold">syntax</span>.</p>
+                <p>The C++ programming language also has a syntax, which describes how the elements of your program must
+                    be written and arranged in order for the program to be considered valid. When you compile your
+                    program, the compiler is responsible for making sure your program follows these syntactical rules.
+                    If your program does something that deviates from the syntax of the language, the compiler will halt
+                    compilation and issue a _syntax error.</p>
+                <p>Unlike the English language, which allows for a lot of ambiguity, the syntax rules of C++ are
+                    strictly defined and upheld. Syntax errors are common. Fortunately, such errors are typically
+                    straightforward to find and fix, as the compiler will generally point you right at them. Compilation
+                    of a program will only complete once all syntax errors are resolved.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Comments">
+            <header class="main-section-header">Comments</header>
+            <article>
+                <p>A <span class="bold">comment</span> is a programmer-readable note that is inserted directly into the
+                    source code of the
+                    program. Comments are ignored by the compiler and are for the programmer’s use only.</p>
+                <p>In C++ there are two different styles of comments, both of which serve the same purpose: to help
+                    programmers document the code in some way.</p>
+                <h1>Single-line comments</h1>
+                <p>The <span class="code-text">//</span> symbol begins a C++ single-line comment, which tells the
+                    compiler to ignore everything from
+                    the <span class="code-text">//</span> symbol to the end of the line. For example:</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | std::cout &lt;&lt; "Hello world!"; // Everything from here to here to the end of the line is ignored</pre>
+                    </code>
+                </div>
+                <p>Typically, the single-line comment is used to make a quick comment about a single line of code.</p>
+                <h1>Multi-line comments</h1>
+                <p>The <span class="code-text">/*</span> and <span class="code-text">*/</span> pair of symbols denotes a
+                    C-style multi-line comment. Everything in between the symbols
+                    is ignored.</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | /* This is a multi-line comment.
+2 |    This line will be ignored.
+3 |    So will this one. */</pre>
+                    </code>
+                </div>
+                <h1>Proper use of comments</h1>
+                <p>Typically, comments should be used for three things. First, for a given library, program, or
+                    function, comments are best used to describe <span class="italic">what</span> the library, program,
+                    or function, does. These are
+                    typically placed at the top of the file or library, or immediately preceding the function.
+                </p>
+                <p>Second, <span class="italic">within</span> a library, program, or function described above, comments
+                    can be used to describe <span class="italic">how</span> the code is going to accomplish its goal.
+                </p>
+                <p>Third, at the statement level, comments should be used to describe <span class="italic">why</span>
+                    the code is doing something. A
+                    bad statement comment explains <span class="italic">what</span> the code is doing. If you ever write
+                    code that is so complex
+                    that needs a comment to explain <span class="italic">what</span> a statement is doing, you probably
+                    need to rewrite your
+                    statement, not comment it.
+                </p>
+                <p>Finally, comments should be written in a way that makes sense to someone who has no idea what the
+                    code does. It is often the case that a programmer will say “It’s obvious what this does! There’s no
+                    way I’ll forget about this”. Guess what? It’s <span class="italic">not</span> obvious, and you <span
+                        class="italic">will</span> be amazed how quickly you
+                    forget. :&rpar; You (or someone else) will thank you later for writing down the what, how, and why
+                    of your code in human language. Reading individual lines of code is easy. Understanding what goal
+                    they are meant to accomplish is not.</p>
+                <h1>Commenting out code</h1>
+                <p>Converting one or more lines of code into a comment is called <span class="bold">commenting
+                        out</span> your code. This provides
+                    a convenient way to (temporarily) exclude parts of your code from being included in your compiled
+                    program.
+                </p>
+                <p>To comment out a single line of code, simply use the <span class="code-text">//</span> style comment
+                    to turn a line of code into a
+                    comment temporarily:</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | //  std::cout &lt;&lt; 1;</pre>
+                    </code>
+                </div>
+                <p>To comment out a block of code, use <span class="code-text">//</span> on multiple lines of code, or
+                    the <span class="code-text">/* */</span> style comment to turn
+                    the block of code into a comment temporarily.</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | //  std::cout &lt;&lt; 1;
+2 | //  std::cout &lt;&lt; 2;
+3 | //  std::cout &lt;&lt; 3;</pre>
+                    </code>
+                </div>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | /*                        
+2 |     std::cout &lt;&lt; 1;
+3 |     std::cout &lt;&lt; 2;
+4 |     std::cout &lt;&lt; 3;
+5 | */</pre>
+                    </code>
+                </div>
+                <p>There are quite a few reasons you might want to do this:</p>
+                <p>
+                <ol>
+                    <li>You’re working on a new piece of code that won’t compile yet, and you need to run the program.
+                        The compiler won’t let you compile the code if there are compiler errors. Commenting out the
+                        code that won’t compile will allow the program to compile so you can run it. When you’re ready,
+                        you can uncomment the code, and continue working on it.</li>
+                    <li>You’ve written new code that compiles but doesn’t work correctly, and you don’t have time to fix
+                        it until later. Commenting out the broken code will ensure the broken code doesn’t execute and
+                        cause problems until you can fix it.</li>
+                    <li>To find the source of an error. If a program isn’t producing the desired results (or is
+                        crashing), it can sometimes be useful to disable parts of your code to see if you can isolate
+                        what’s causing it to not work correctly. If you comment out one or more lines of code, and your
+                        program starts working as expected (or stops crashing), odds are whatever you last commented out
+                        was part of the problem. You can then investigate why those lines of code are causing the
+                        problem.</li>
+                    <li>You want to replace one piece of code with another piece of code. Instead of just deleting the
+                        original code, you can comment it out and leave it there for reference until you’re sure your
+                        new code works properly. Once you are sure your new code is working, you can remove the old
+                        commented out code. If you can’t get your new code to work, you can always delete the new code
+                        and uncomment the old code to revert to what you had before.</li>
+                </ol>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_objects_and_variables">
+            <header class="main-section-header">
+                Introduction to objects and variables
+            </header>
+            <article>
+                <h1>Data and values</h1>
+                <p>A program can acquire data to work with in many ways: from a file or database, over a network, from
+                    the user providing input on a keyboard, or from the programmer putting data directly into the source
+                    code of the program itself.</p>
+                <p>In programming, a single piece of data is called a <span class="bold">value</span> (sometimes called
+                    a <span class="bold">data value</span>). Common
+                    examples of values include:</p>
+                <ul>
+                    <li>Numbers (e.g. <span class="code-text">5</span> or <span class="code-text">-6.7</span>).</li>
+                    <li>Characters, which are placed between single-quotes (e.g. <span class="code-text">'H'</span> or
+                        <span class="code-text">'$'</span>). Only a single symbol may
+                        be used.
+                    </li>
+                    <li>Text, which must be placed between double-quotes (e.g. <span class="code-text">"Hello"</span> or
+                        <span class="code-text">"H"</span>). Text can contain 0 or
+                        more characters.
+                    </li>
+                </ul>
+                <p>Values that are placed directly into the source code are called <span class="bold">literals</span>.
+                </p>
+                <h1>Random Access Memory</h1>
+                <p>The main memory in a computer is called <span class="bold">Random Access Memory</span> (often called
+                    <span class="bold">RAM</span> for short). When we
+                    run a program, the operating system loads the program into RAM. Any data that is hardcoded into the
+                    program itself (e.g. text such as “Hello, world!”) is loaded at this point.
+                </p>
+                <p>You can think of RAM as a series of numbered boxes that can be used to store data while the program
+                    is running.</p>
+                <h1>Objects and variables</h1>
+                <p>In C++, direct memory access is discouraged. Instead, we access memory indirectly through an <span
+                        class="bold">object</span>.
+                    An object represents a region of storage (typically RAM or a CPU register) that can hold a value.
+                </p>
+                <h1>Variable definition</h1>
+                <p>In order to use a variable in our program, we need to tell the compiler that we want one. The most
+                    common way to do this is by use of a special kind of declaration statement called a <span
+                        class="bold">definition</span>.</p>
+                <p>Here’s an example of defining a variable named <span class="code-text">x</span>:</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | int x; // define a variable named x (of type int)</pre>
+                    </code>
+                </div>
+                <p>At <span class="bold">compile-time</span> (when the program is being compiled), when encountering
+                    this statement, the compiler
+                    makes a note to itself that we want a variable with the name <span class="code-text">x</span>, and
+                    that the variable has the data
+                    type <span class="code-text">int</span> (more on data types in a moment). From that point forward,
+                    whenever we use the identifier <span class="code-text">x</span>
+                    in our code, the compiler will know
+                    that we are referring to this variable.</p>
+                <p>A variable created via a definition statement is said to be <span class="bold">defined</span> at the
+                    point where the definition
+                    statement is placed. For now, your variables should be defined inside functions (such as within
+                    <span class="code-text">main()</span>).
+                </p>
+                <h1>Variable creation</h1>
+                <p>At <span class="bold">runtime</span> (when the program is loaded into memory and run), each object is
+                    given an actual storage
+                    location (such as RAM, or a CPU register) that it can use to store values. The process of reserving
+                    storage for an object’s use is called <span class="bold">allocation</span>. Once allocation has
+                    occurred, the object has been
+                    created and can be used.</p>
+                <h1>Data types</h1>
+                <p>So far, we’ve covered that objects are regions of storage that can store a data value (how exactly
+                    data is stored is a topic for a future lesson). A <span class="bold">data type</span> (more commonly
+                    just called a <span class="bold">type</span>)
+                    determines what kind of value (e.g. a number, a letter, text, etc…) the object will store.</p>
+                <p>In C++, the type of an object must be known at compile-time, and that type can not be changed without
+                    recompiling the program. This means an integer variable can only hold integer values. If you want to
+                    store some other kind of value, you’ll need to use a different type.</p>
+                <p>These are the basic data types:</p>
+                <ul>
+                    <li>boolean - stores true or false values</li>
+                    <li>char - stores a single character/letter/number, or ASCII values</li>
+                    <li>int - stores whole numbers, without decimals</li>
+                    <li>float - stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7
+                        decimal</li>
+                    <li>double - stores fractional numbers, containing one or more decimals. Sufficient for storing 15
+                        decimal digits</li>
+                </ul>
+                <h1>Defining multiple variables</h1>
+                <p>It is possible to define multiple variables <span class="italic">of the same type</span> in a single
+                    statement by separating the
+                    names with a comma. The following code snippet:</p>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | int a;
+2 | int b;</pre>
+                    </code>
+                </div>
+                <div class="code-container">
+                    <code>
+                        <pre>
+1 | int a, b;</pre>
+                    </code>
+                </div>
+                <p>When defining multiple variables this way, there are two common mistakes that new programmers tend
+                    to make (neither serious, since the compiler will catch these and ask you to fix them):</p>
+                <ol>
+                    <li>The first mistake is giving each variable a type when defining variables in sequence, and</li>
+                    <li>The second mistake is to try to define variables of different types in the same statement, which
+                        is not allowed. Variables of different types must be defined in separate statements.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Variable_assignment_and_initialization">
+            <header class="main-section-header">
+                Variable assignment and initialization
+            </header>
+            <article>
+                <h1>Variable assignment</h1>
+                <p>After a variable has been defined, you can give it a value (in a separate statement) using the <span
+                        class="code-text">=</span> operator. This process is called <span
+                        class="bold">assignment</span>, and the <span class="code-text">=</span> operator is called the
+                    <span class="bold">assignment operator</span>
+                </p>
+                <p>By default, assignment copies the value on the right-hand side of the <span class="italic">=
+                        operator</span> to the variable on the left-hand side of the operator. This is called <span
+                        class="bold">copy-assignment</span>.</p>
+                <p>Assignment can be used whenever we want to change the value held by a variable.</p>
+                <h1>Variable initialization</h1>
+                <p>When an object is defined, you can optionally provide an initial value for the object. The process of
+                    specifiying an initial value for an object is called <span class="bold">initialization</span>, and
+                    the syntax used to initialize an object is called an <span class="bold">initializer</span>.
+                    Informally, the initial value is often called an "initializer" as well.</p>
+                <h1>Different forms of initialization</h1>
+                <p>Unlike assignment (which is generally straightforward), initialization in C++ is surprisingly
+                    complex.</p>
+                <p>There are 5 common froms of initialization in C++:</p>
+                <div class="code-container">
+                    <pre>
+1 | int a;         // default-initialization (no initializer)
+2 |
+3 | // Traditional initialization forms:
+4 | int b = 5;     // copy-initialization (initial value after equals sign)
+5 | int c ( 6 );   // direct-initialization (initial value in parentheses)
+6 |
+7 | // Modern initalization forms (preferred):
+8 | int d { 7 };   // direct list-initialization (initial value in braces)
+9 | int e {};      // value-initialization (empty braces)</pre>
+                </div>
+                <p>You may see the above forms written with different spacing (e.g. <span class="code-text">int
+                        b=5;</span> <span class="code-text">int c(6);</span>, <span class="code-text">int d{7};</span>,
+                    <span class="code-text">int e{};</span>). Whether you use extra spaces for readability or not is a
+                    matter of personal preference.
+                </p>
+                <h1>Default-initialization</h1>
+                <p>When no initializer is provided (such as for variable <span class="code-text">a</span> above), this
+                    is called <span class="bold">default-initialization</span>. In many cases, default-initialization
+                    performs no initialization, and leaves the variable with an indeterminate value (a value that is not
+                    predictable, sometimes called a "garbage value").</p>
+                <h1>Copy-initialization</h1>
+                <p>When an initial value is provided after an equals sign, this is called <span
+                        class="bold">copy-initialization</span>. This form of initialization was inherited from the C
+                    language.</p>
+                <div class="code-container">
+                    <pre>
+1 | int width = 5;</pre>
+                </div>
+                <p>Copy-initialization had fallen out of favor in modern C++ due to being less efficient than other
+                    forms of initialization for some complex types. However, C++17 remedied the bulk of these issues,
+                    and copy-initialization is now finding new advocates.</p>
+                <h1>Direct-initialization</h1>
+                <p>When an initial value is provided inside parenthesis, this is called <span
+                        class="bold">direct-initialization</span>.</p>
+                <div class="code-container">
+                    <pre>
+1 | int width ( 5 );</pre>
+                </div>
+                <p>Direct-initialization was initially introduced to allow for more efficient initialization of complex
+                    objects (those with class types, which we’ll cover in a future chapter). Just like
+                    copy-initialization, direct-initialization had fallen out of favor in modern C++, largely due to
+                    being superseded by direct-list-initialization.</p>
+                <h1>List-initialization</h1>
+                <p>The modern way to initialize objects in C++ is to use a form of initialization that makes use of
+                    curly braces. This is called <span class="bold">list-initialization</span> (or <span
+                        class="bold">uniform initialization</span> or <span class="bold">brace initialization</span>).
+                </p>
+                <p>List-initialization comes in two forms:</p>
+                <div class="code-container">
+                    <pre>
+1 | int width { 5 };    // preferred
+2 | int height = { 6 }; // rarely used</pre>
+                </div>
+                <p>List-initialization was introduced to provide a initialization syntax that works in almost all cases,
+                    behaves consistently, and has an unambiguous syntax that makes it easy to tell where we’re
+                    initializing an object.</p>
+                <p>Additionally, list-initialization also provides a way to initialize objects with a list of values
+                    rather than a single value (which is why it is called “list-initialization”).</p>
+                <h1>Zero-initialization</h1>
+                <p>In most cases, value-initialization will implicitly initialize the variable to zero (or whatever
+                    value is closest to zero for a given type). In cases where zeroing occurs, this is called
+                    <span class="bold">zero-initialization</span>.
+                </p>
+                <div class="code-container">
+                    <pre>
+1 | int width {};</pre>
+                </div>
+                <h1>Instantiation</h1>
+                <p>The term <span class="bold">instantiation</span> is a fancy word that means a variable has been
+                    created (allocated) and
+                    initialized (this includes default initialization). An instantiated object is sometimes called an
+                    <span class="bold">instance</span>. Most often, this term is applied to class type objects, but it
+                    is occasionally applied to
+                    objects of other types as well.
+                </p>
+                <h1>Unused initialized variables warnings</h1>
+                <p>Modern compilers will typically generate warnings if a variable is initialized but not used (since
+                    this is rarely desirable). And if “treat warnings as errors” is enabled, these warnings will be
+                    promoted to errors and cause the compilation to fail.</p>
+                <p>There are a few easy ways to fix this.</p>
+                <ol>
+                    <li>If the variable really is unused and you don’t need it, then the easiest option is to remove the
+                        definition of <span class="code-text">x</span> (or comment it out). After all, if it’s not used,
+                        then removing it won’t affect anything.</li>
+                    <li>Another option is to simply use the variable somewhere.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Uninitialized_variables_and_undefined_behavior">
+            <header class="main-section-header">
+                Uninitialized variables and undefined behavior
+            </header>
+            <article>
+                <h1>Uninitialized variables</h1>
+                <p>Unlike some programming languages, C/C++ does not automatically initialize most variables to a given
+                    value (such as zero). When a variable that is not initialized is given a memory address to use to
+                    store data, the default value of that variable is whatever (garbage) value happens to already be in
+                    that memory address! A variable that has not been given a known value (through initialization or
+                    assignment) is called an <span class="bold">uninitialized variable.</span></p>
+                <p>To recap:</p>
+                <ul>
+                    <li>Initialized = The object is given a known value at the point of definition.</li>
+                    <li>Assignment = The object is given a known value beyond the point of definition.</li>
+                    <li>Uninitialized = The object has not been given a known value yet.</li>
+                </ul>
+                <h1>Undefined behavior</h1>
+                <p><span class="bold">Undefined behavior</span> (often abbreviated <span class="bold">UB</span>) is the
+                    result of executing code whose behavior is not
+                    well-defined by the C++ language. In this case, the C++ language doesn’t have any rules determining
+                    what happens if you use the value of a variable that has not been given a known value. Consequently,
+                    if you actually do this, undefined behavior will result.</p>
+                <p>Code implementing undefined behavior may exhibit any of the following symptoms:</p>
+                <ul>
+                    <li>Your program produces different results every time it is run.</li>
+                    <li>Your program consistently produces the same incorrect result.</li>
+                    <li>Your program behaves inconsistently (sometimes produces the correct result, sometimes not).</li>
+                    <li>Your program seems like it’s working but produces incorrect results later in the program.</li>
+                    <li>Your program crashes, either immediately or later.</li>
+                    <li>Your program works on some compilers but not others.</li>
+                    <li>Your program works until you change some other seemingly unrelated code.</li>
+                </ul>
+                <p>Or, your code may actually produce the correct behavior anyway.</p>
+                <h1>Implementation-defined behavior and unspecified behavior</h1>
+                <p>A specific compiler and the associated standard library it comes with are called an <span
+                        class="bold">implementation</span>
+                    (as these are what actually implements the C++ language). In some cases, the C++ language standard
+                    allows the implementation to determine how some aspect of the language will behave, so that the
+                    compiler can choose a behavior that is efficient for a given platform. Behavior that is defined by
+                    the implementation is called <span class="bold">implementation-defined behavior</span>.
+                    Implementation-defined behavior must
+                    be documented and consistent for a given implementation.</p>
+                <p><span class="bold">Unspecified behavior</span> is almost identical to implementation-defined behavior
+                    in that the behavior is
+                    left up to the implementation to define, but the implementation is not required to document the
+                    behavior.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_iostream:_cout,_cin,_and_endl">
+            <header class="main-section-header">
+                Introduction to iostream: cout, cin, and endl
+            </header>
+            <article>
+                <h1>The input/output library</h1>
+                <p>The <span class="bold">input/output library</span> (io library) is part of the C++ standard library
+                    that deals with basic input
+                    and output. We’ll use the functionality in this library to get input from the keyboard and output
+                    data to the console. The <span class="italic">io</span> part of <span class="italic">iostream</span>
+                    stands for <span class="italic">input/output</span>.</p>
+                <p>To use the functionality defined within the <span class="italic">iostream</span> library, we need to
+                    include the <span class="italic">iostream</span> header
+                    at the top of any code file that uses the content defined in <span class="italic">iostream</span>.
+                </p>
+                <h1>std::cout</h1>
+                <p>The <span class="italic">iostream</span> library contains a few predefined variables for us to use.
+                    One of the most useful is
+                    <span class="bold">std::cout</span>, which allows us to send data to the console to be printed as
+                    text. <span class="italic">cout</span> stands for
+                    “character output”.
+                </p>
+                <p>In this program, we have included <span class="italic">iostream</span> so that we have access to
+                    <span class="italic">std::cout</span>. Inside our <span class="italic">main</span>
+                    function, we use <span class="italic">std::cout</span>, along with the <span class="bold">insertion
+                        operator (<span class="code-text">&lt;&lt;</span>)</span>, to send the text <span
+                        class="italic">Hello world!</span> to
+                    the console to be printed.
+                </p>
+                <h1>Using <span class="code-text">std::endl</span> to output a newline</h1>
+                <p>If we want to print separate lines of output to the console, we need to tell the console to move the
+                    cursor to the next line. We can do that by outputting a newline. A <span class="bold">newline</span>
+                    is an OS-specific
+                    character or sequence of characters that moves the cursor to the start of the next line.</p>
+                <p>One way to output a newline is to output <span class="code-text">std::endl</span> (which stands for
+                    “end line”).</p>
+                <h1>std::cin</h1>
+                <p><span class="code-text">std::cin</span> is another predefined variable in the <span
+                        class="code-text">iostream</span> library. Whereas <span class="code-text">std::cout</span>
+                    prints data to the
+                    console (using the insertion operator <span class="code-text">&lt;&lt;</span> to provide the data),
+                    <span class="code-text">std::cin</span> (which stands for “character
+                    input”) reads input from keyboard. We typically use the extraction operator <span
+                        class="code-text">&gt;&gt;</span> to put the input
+                    data in a variable (which can then be used in subsequent statements).
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Keywords_and_naming_identifiers">
+            <header class="main-section-header">
+                Keywords and naming identifiers
+            </header>
+            <article>
+                <h1>Keywords</h1>
+                <p>C++ reserves a set of 92 words (as of C++23) for its own use. These words are called <span
+                        class="bold">keywords</span> (or
+                    reserved words), and each of these keywords has a special meaning within the C++ language.</p>
+                <h1>Identifier naming rules</h1>
+                <p>As a reminder, the name of a variable (or function, type, or other kind of item) is called an
+                    identifier. C++ gives you a lot of flexibility to name identifiers as you wish. However, there are a
+                    few rules that must be followed when naming identifiers:</p>
+                <ul>
+                    <li>The identifier can not be a keyword. Keywords are reserved.</li>
+                    <li>The identifier can only be composed of letters (lower or upper case), numbers, and the
+                        underscore character. That means the name can not contain symbols (except the underscore) nor
+                        whitespace (spaces or tabs).</li>
+                    <li>The identifier must begin with a letter (lower or upper case) or an underscore. It can not start
+                        with a number.</li>
+                    <li>C++ is case sensitive, and thus distinguishes between lower and upper case letters. <span
+                            class="code-text">nvalue</span> is different than <span class="code-text">nValue</span> is
+                        different than <span class="code-text">NVALUE</span>.</li>
+                </ul>
+                <h1>Identifier naming best practices</h1>
+                <p>Now that you know how you can name a variable, let’s talk about how you should name a variable (or
+                    function).</p>
+                <ol>
+                    <li>
+                        <p>It is conventional in C++ that variable names should begin with a lowercase letter. If the
+                            variable name is a single word or acronym, the whole thing should be written in lowercase
+                            letters.</p>
+                        <p>Identifier names that start with a capital letter are typically used for user-defined types
+                            (such as structs, classes, and enumerations, all of which we will cover later).</p>
+                        <p>If the variable or function name is multi-word, there are two common conventions: words
+                            separated by underscores (sometimes called snake_case), or intercapped (sometimes called
+                            camelCase, since the capital letters stick up like the humps on a camel).</p>
+                    </li>
+                    <li>Avoid naming your identifiers starting with an underscore. Although syntactically legal, these
+                        names are typically reserved for OS, library, and/or compiler use.</li>
+                    <li>The name of your identifiers should make clear what the value they are holding means
+                        (particularly if the units aren’t obvious). Identifiers should be named in a way that would help
+                        someone who has no idea what your code does be able to figure it out as quickly as possible. In
+                        3 months, when you look at your program again, you’ll have forgotten how it works, and you’ll
+                        thank yourself for picking variable names that make sense.
+                    </li>
+                    <li>Avoid abbreviations, except when they are common and unambiguous (e.g. <span
+                            class="code-text">num</span>, <span class="code-text">cm</span>, <span
+                            class="code-text">idx</span>).</li>
+                    <li>For variable declarations, it can be useful to use a comment to describe what a variable is
+                        going to be used for, or to explain anything else that might not be obvious. For example, say
+                        we’ve declared a variable that is supposed to store the number of characters in a piece of text.
+                        Does the text “Hello World!” have 10, 11, 12 characters? It depends on whether we’re including
+                        whitespace or punctuation. Rather than naming the variable
+                        <span class="code-text">numCharsIncludingWhitespaceAndPunctuation</span>, which is rather
+                        lengthy, a well placed comment on or
+                        above the declaration line should help the user figure it out
+                    </li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Whitespace_and_basic_formatting">
+            <header class="main-section-header">
+                Whitespace and basic formatting
+            </header>
+            <article>
+                <p><span class="bold">Whitespace</span> is a term that refers to characters that are used for formatting
+                    purposes. In C++, this refers primarily to spaces, tabs, and newlines. Whitespace in C++ is
+                    generally used for 3 things: separating certain language elements, inside text, and for formatting
+                    code.</p>
+                <h1>Some language elements must be whitespace-separated</h1>
+                <p>The syntax of the language requires that some elements are separated by whitespace. This mostly
+                    occurs when two keywords or identifiers must be placed consecutively, so the compiler can tell them
+                    apart.</p>
+                <h1>Quoted text takes the amount of whitespace literally</h1>
+                <p>Inside quoted text, the amount of whitespace is taken literally.</p>
+                <p>It should be also noted that:</p>
+                <ul>
+                    <li>Newlines are not allowed in quoted text.</li>
+                    <li>Quoted text separated by nothing but whitespace (spaces, tabs, or newlines) will be
+                        concatenated.</li>
+                </ul>
+                <h1>Using whitespace to format code</h1>
+                <p>Whitespace is otherwise generally ignored. This means we can use whitespace wherever we like to
+                    format our code in order to make it easier to read.</p>
+                <h1>Basic formatting</h1>
+                <p>Unlike some other languages, C++ does not enforce any kind of formatting restrictions on the
+                    programmer. For this reason, we say that C++ is a whitespace-independent language.</p>
+                <p>Here are our recommendations for basic formatting:</p>
+                <ol>
+                    <li>It’s fine to use either tabs or spaces for indentation (most IDEs have a setting where you can
+                        convert a tab press into the appropriate number of spaces). Developers who prefer spaces tend to
+                        do so because it ensures that code is precisely aligned as intended regardless of which editor
+                        or settings are used</li>
+                    <li>
+                        <p>There are two conventional styles for function braces.</p>
+                        <p>Many developers prefer putting the opening curly brace on the same line as the statement:</p>
+                        <div class="code-container">
+                            <pre>
+1 | int main() {
+2 |     // statements here
+3 | }</pre>
+                        </div>
+                        <p>The justification for this is that it reduces the amount of vertical whitespace (as you
+                            aren’t devoting an entire line to an opening curly brace), so you can fit more code on a
+                            screen.</p>
+                        <p>While some prefer putting braces on a new line:</p>
+                        <div class="code-container">
+                            <pre>
+1 | int main()
+2 | {
+3 |     // statements here
+4 | }</pre>
+                        </div>
+                        <p>This enhances readability, and is less error prone since your brace pairs should always be
+                            indented at the same level. If you get a compiler error due to a brace mismatch, it’s very
+                            easy to see where.</p>
+                    </li>
+                    <li>Lines should not be too long. Typically, 80 characters has been the de facto standard for the
+                        maximum length a line should be. If a line is going to be longer, it should be split (at a
+                        reasonable spot) into multiple lines. This can be done by indenting each subsequent line with an
+                        extra tab, or if the lines are similar, by aligning it with the line above (whichever is easier
+                        to read).</li>
+                    <li>If a long line is split with an operator (eg. << or +), the operator should be placed at the
+                            beginning of the next line, not the end of the current line.</li>
+                    <li>Use whitespace to make your code easier to read by aligning values or comments or adding spacing
+                        between blocks of code.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_literals_and_operators">
+            <header class="main-section-header">
+                Introduction to literals and operators
+            </header>
+            <article>
+                <h1>Literals</h1>
+                <p>Consider the following two statements:</p>
+                <div class="code-container">
+                    <pre>
+1 | std::cout << "Hello world!";
+2 | int x {5};</pre>
+                </div>
+                <p>What are ‘”Hello world!”‘ and ‘5’? They are literals. A <span class="bold">literal</span> (also known
+                    as a <span class="bold">literal constant</span>) is
+                    a fixed value that has been inserted directly into the source code.</p>
+                <p>Literals and variables both have a value (and a type). Unlike a variable (whose value can be set and
+                    changed through initialization and assignment respectively), the value of a literal is fixed and
+                    cannot be changed. The literal <span class="code-text">5</span> always has value <span
+                        class="code-text">5</span>. This is why literals are called constants.</p>
+                <h1>Operators</h1>
+                <p>In mathematics, an <span class="bold">operation</span> is a process involving zero or more input
+                    values (called <sopan class="bold">operands</sopan>) that
+                    produces a new value (called an output value). The specific operation to be performed is denoted by
+                    a symbol called an <span class="bold">operator</span>.</p>
+                <p>For example, as children we all learn that <span class="italic">2 + 3</span> equals <span
+                        class="italic">5</span>. In this case, the literals <span class="italic">2</span> and <span
+                        class="italic">3</span> are the
+                    operands, and the symbol <span class="italic">+</span> is the operator that tells us to apply
+                    mathematical addition on the
+                    operands to produce the new value <span class="italic">5</span>.</p>
+                <p>You are likely already quite familiar with standard arithmetic operators from common usage in
+                    mathematics, including addition (<span class="code-text">+</span>), subtraction (<span
+                        class="code-text">-)</span>, multiplication (<span class="code-text">*</span>), and division
+                    (<span class="code-text">/</span>). In C++,
+                    assignment (<span class="code-text">=</span>) is an operator as well, as are insertion (<span
+                        class="code-text">&lt;&lt;</span>), extraction (<span class="code-text">&gt;&gt;</span>), and
+                    equality (<span class="code-text">==</span>).
+                    While most operators have symbols for names (e.g. <span class="code-text">+</span>, or <span
+                        class="code-text">==</span>), there are also a number of
+                    operators that are keywords (e.g. <span class="code-text">new</span>, <span
+                        class="code-text">delete</span>, and <span class="code-text">throw</span>).</p>
+                <p>The number of operands that an operator takes as input is called the operator’s <span
+                        class="bold">arity</span>.</p>
+                <p>Operators in C++ come in four different arities:</p>
+                <ul>
+                    <li><span class="bold">Unary</span> operators act on one operand.</li>
+                    <li><span class="bold">Binary</span> operators act on two operands (often called <span
+                            class="italic">left</span> and <span class="italic">right</span>, as the left operand
+                        appears on the left side of the operator, and the right operand appears on the right side of the
+                        operator).</li>
+                    <li><span class="bold">Ternary</span> operators act on three operands.</li>
+                    <li><span class="bold">Nullary</span> operators act on zero operands.</li>
+                </ul>
+                <h1>Chaining operators</h1>
+                <p>Operators can be chained together such that the output of one operator can be used as the input for
+                    another operator.</p>
+                <p>It’s enough to know that the arithmetic operators execute in the same order as they do in standard
+                    mathematics: Parenthesis first, then Exponents, then Multiplication & Division, then Addition &
+                    Subtraction. This ordering is sometimes abbreviated <span class="italic">PEMDAS</span>.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_expressions">
+            <header class="main-section-header">Introduction to expressions</header>
+            <article>
+                <h1>Expressions</h1>
+                <p>In general programming, an <span class="bold">expression</span> is a non-empty sequence of literals,
+                    variables, operators, and
+                    function calls that calculates a value. The process of executing an expression is called <span
+                        class="bold">evaluation</span>,
+                    and the resulting value produced is called the <span class="bold">result</span> of the expression
+                    (also sometimes called the
+                    <span class="bold">return value</span>).
+                </p>
+                <p>Expressions do not end in a semicolon, and cannot be compiled by themselves. Rather, expressions are
+                    always evaluated as part of statements.</p>
+                <h1>Expression statements</h1>
+                <p>We mentioned above that expressions cannot be executed by themselves -- they must exist as part of a
+                    statement. Fortunately, it’s trivial to convert any expression into an equivalent statement. An
+                    <span class="bold">expression statement</span> is a statement that consists of an expression
+                    followed by a semicolon. When the
+                    expression statement is executed, the expression will be evaluated.
+                </p>
+                <h1>Useless expression statements</h1>
+                <p>We can also make expression statements that compile but have no effect. For example, the expression
+                    statement (<span class="code-text">2 * 3;</span>) is an expression statement whose expression
+                    evaluates to the result value of <span class="italic">6</span>,
+                    which is then discarded. While syntactically valid, such expression statements are useless. Some
+                    compilers (such as gcc and Clang) will produce warnings if they can detect that an expression
+                    statement is useless.</p>
+                <h1>Subexpressions, full expressions, and compound expressions</h1>
+                <p>A <span class="bold">subexpression</span> is an expression used as an operand.</p>
+                <p>A <span class="bold">full expression</span> is an expression that is not a subexpression.</p>
+                <p>A <span class="bold">compound expression</span> is an expression that contains two or more uses of
+                    operators.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
