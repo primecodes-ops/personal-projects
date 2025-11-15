@@ -19,8 +19,11 @@ It includes web development projects, C++ programs, and small applications I’v
 | [To-Do App](./to-do-app)                                       | Simple interactive to-do app                    | HTML, CSS, JS |
 | [JS Calculator](./JS-Calculator)                               | Simple interactive to-calculator                | HTML, CSS, JS |
 
+<<<<<<< HEAD
 > > > > > > > 7130912 (initial commit to JS Calculator Project)
 
+=======
+>>>>>>> 32f6f58730e28043c9c39bf53f927af9101baa70
 ---
 
 ## 🚀 Learning Goals
